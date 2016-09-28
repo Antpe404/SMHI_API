@@ -1,3 +1,29 @@
+#'Fetch data from the SMHI API
+#'
+#'Fetches data from the SMHI API via XML. The functions cleans the data and returns 
+#'it in a data.frame. The function can collect data from weather stations managed by SMHI,
+#' with requirement that the station are supplying data continously. 
+#' The returning data is fram the last four months.
+#'
+#'@param station    an ID for a weather station managed by SMHI. 
+#'Available stations can be found by typing get_station()
+#'@param parameter   an ID for the type of data to collect. There are four different 
+#'types available, which can be found by typing get_parameters()
+#'
+#'@return A dataframe with with the required type of data and the dates, over the last
+#'four months.
+#'
+#'@details The function uses XML to collect data from the SMHI API. The data is 
+#'transformed in order to contain a proper output. The "Date" column is in lubridate-format
+#'
+#'@references 
+#'\url{http://opendata.smhi.se/apidocs/metobs/index.html}
+#'
+#'@examples
+#'##Collect the air temperature hourwise (parameter=1) in Arvidsjaur(station=159880) the latest four months
+#'smhi_data(159880,1)
+#'
+#'@export
 smhi_data <- function(station,parameter){
   if ((station %in% get_station()$ID)&&(parameter %in% get_parameters()[,1])){
     
