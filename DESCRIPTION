@@ -3,7 +3,7 @@ Type: Package
 Title: What the package does (short line)
 Version: 1.0
 Date: 2016-09-28
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Emil Klasson Svensson [aut,cre] Anton Persson [aut,cre]
+Maintainer: Emil Klasson Svensson <emisv463@student.liu.se>
+Description: Downloads data from the SMHI API and collects and plots data for users.
+License: BSD_2_clause
