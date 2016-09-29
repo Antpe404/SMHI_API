@@ -40,7 +40,7 @@ smhi_plot <- function(station,parameter){
   
   p <-arrangeGrob(p, bottom="Source: SMHI")  
   grid.newpage()
-  grid.draw(p)
+  plot(p)
 }
 
 #smhi_plot(138240,6)
