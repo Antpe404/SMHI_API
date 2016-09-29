@@ -9,3 +9,16 @@ Description: Downloads data from the SMHI API and collects and plots data for
     users.
 License: BSD_2_clause
 RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown,
+    RJSONIO,
+    XML,
+    ggplot2,
+    grid, 
+    gridExtra,
+    jsonlite, 
+    lubridate,
+    stringr
+VignetteBuilder: knitr
+
+
