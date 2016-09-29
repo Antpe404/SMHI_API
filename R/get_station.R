@@ -10,7 +10,6 @@
 #'
 #'@details Uses json to collect the data that's up to date, from SMHI.
 #'
-
 #'
 #'@references 
 #'\url{http://opendata.smhi.se/apidocs/metobs/index.html}
