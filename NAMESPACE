@@ -3,3 +3,4 @@
 export(get_parameters)
 export(get_station)
 export(smhi_data)
+export(smhi_plot)

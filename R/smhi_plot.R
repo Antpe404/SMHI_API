@@ -21,6 +21,8 @@
 #'@examples
 #'##Plot the air temperature hourwise (parameter=1) in Arvidsjaur(station=159880) the latest four months
 #'smhi_data(159880,1)
+#'
+#'@export
 
 
 smhi_plot <- function(station,parameter){
