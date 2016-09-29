@@ -19,13 +19,54 @@
 #'get_station()
 #'
 #'@export
-get_station<-function(x){
+#'
+#'
+#'
+
+
+get_station<-function(){
+  
   require(jsonlite)
   require(RJSONIO)
+  
   json_file <- "http://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station.json"
   jsonlist <- fromJSON(json_file)
-  available<-as.data.frame(jsonlist$station)
-  available<- ustation[ustation$updated==max(ustation$updated), 1:5]
+  
+  station_name<-0
+  id<-0
+  height<-0
+  latitude<-0
+  longitude<-0
+  updated<-0
+  for (i in 1:length(jsonlist$station)){
+    station_name[i]<-jsonlist$station[[i]]$name
+    id[i]<-jsonlist$station[[i]]$id
+    height[i]<-jsonlist$station[[i]]$height
+    latitude[i]<-jsonlist$station[[i]]$latitude
+    longitude[i]<-jsonlist$station[[i]]$longitude
+    updated[i]<-jsonlist$station[[i]]$updated
+    
+    res<-data.frame(station_name, id, height, latitude, longitude, updated)
+    available<-res[res$updated==max(res$updated), 1:5]
+   
+  }
   colnames(available)<-c("Station_name", "ID", "Height", "Latitude", "Longitude")
+  
   return(available)
 }
+
+#get_station()$ID
+
+
+#get_station<-function(x){
+ # require(jsonlite)
+  #require(RJSONIO)
+  #json_file <- "http://opendata-download-metobs.smhi.se/api/version/1.0/parameter/1/station.json"
+  #jsonlist <- fromJSON(json_file)
+  #available<-as.data.frame(jsonlist$station)
+  #available<- available[available$updated==max(available$updated), 1:5]
+  #colnames(available)<-c("Station_name", "ID", "Height", "Latitude", "Longitude")
+  #return(available)
+  
+  
+#}

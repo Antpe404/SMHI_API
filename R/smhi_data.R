@@ -25,7 +25,7 @@
 #'
 #'@export
 smhi_data <- function(station,parameter){
-  if ((station %in% get_station()$ID)&&(parameter %in% get_parameters()[,1])){
+  if ((station %in% get_station()$ID) && (parameter %in% get_parameters()[,1])){
     
     require(XML)
     require(lubridate)
@@ -71,13 +71,14 @@ smhi_data <- function(station,parameter){
     return(datahi)
   }
   else{
-    print("Your input is invalid. Use get_parameters() and get_station() to see the available station ID:s and the available parameters!")
-  }}
+    return(print("Your input is invalid. Use get_parameters() and get_station() to see the available station ID:s and the available parameters!"))
+  }
+  }
 
-mindata<-smhi_data(93220,2)
-mindata<-smhi_data(93220,3)#Funkar inte. Fint.
-mindata<-smhi_data(90,1) #Funkar inte. Fint. 
-mindata<-smhi_data(173810,1) #Funkar men bristande datamaterial 
-mindata<-smhi_data(159889,1) #Funkar inte. Fint
-mindata<-smhi_data(159880,1) #Funkar för ARvidsjaur också. Fan vad FEINT.
-mindata<-smhi_data(138240,6) #Humidity funkar med.
+#mindata<-smhi_data(93220,2)
+#mindata<-smhi_data(93220,3)#Funkar inte. Fint.
+#mindata<-smhi_data(90,1) #Funkar inte. Fint. 
+#mindata<-smhi_data(173810,1) #Funkar men bristande datamaterial 
+#mindata<-smhi_data(159889,1) #Funkar inte. Fint
+#mindata<-smhi_data(159880,1) #Funkar för ARvidsjaur också. Fan vad FEINT.
+#mindata<-smhi_data(138240,6) #Humidity funkar med.

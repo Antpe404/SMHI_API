@@ -43,9 +43,9 @@ smhi_plot <- function(station,parameter){
   grid.draw(p)
 }
 
-smhi_plot(138240,6)
-smhi_plot(138240,4)
-smhi_plot(138240,2)
-smhi_plot(138240,1)
-smhi_plot(86340, 2)
-smhi_plot(93220, 2)
+#smhi_plot(138240,6)
+#smhi_plot(138240,4)
+#smhi_plot(138240,2)
+#smhi_plot(138240,1)
+#smhi_plot(86340, 2)
+#smhi_plot(93220, 2)
