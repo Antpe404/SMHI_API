@@ -71,7 +71,7 @@ smhi_data <- function(station,parameter){
     return(datahi)
   }
   else{
-    return(print("Your input is invalid. Use get_parameters() and get_station() to see the available station ID:s and the available parameters!"))
+    return(warning("Your input is invalid. Use get_parameters() and get_station() to see the available station ID:s and the available parameters!"))
   }
   }
 

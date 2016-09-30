@@ -18,7 +18,6 @@ Suggests: knitr,
     gridExtra,
     jsonlite, 
     lubridate,
-    stringr
+    stringr,
+    testthat
 VignetteBuilder: knitr
-
-
